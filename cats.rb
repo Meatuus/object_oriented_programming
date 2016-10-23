@@ -12,8 +12,10 @@ class Cat
 
 #Question 4
 	def eats_at
-		if meal_time < 13
+		if meal_time <= 11
 			"#{meal_time} AM"
+		elsif meal_time == 12
+			"#{meal_time} PM"
 		else
 			pm = meal_time - 12
 			"#{pm} PM"
@@ -28,7 +30,7 @@ class Cat
 end
 
 #Question 3
-kitty = Cat.new("Kitty", "Kibble", 20)
+kitty = Cat.new("Kitty", "Kibble", 12)
 purr = Cat.new("Purrr", "Salmon", 8)
 silky = Cat.new("Silky", "Beef Chunks", 14)
 

@@ -1,5 +1,7 @@
 class Rover
 
+	attr_accessor :x_coordinate, :y_coordinate, :direction
+
 	def initialize(x_coordinate, y_coordinate, direction)
 		@x_coordinate = x_coordinate
 		@y_coordinate = y_coordinate
@@ -20,12 +22,12 @@ class Rover
 			else
 				puts "error"
 			end
-			puts "test"
+			# puts "test"
 		end
 	end
 
 	def move
-		puts "test move"
+		# puts "test move"
 		if @direction == "N"
 			@x_coordinate += 1
 		elsif @direction == "E"
@@ -40,32 +42,32 @@ class Rover
 
 	def turn_left
 			if @direction == "N"
-				@direction == "W"
+				@direction = "W"
 				puts "#{@direction} facing"
 			elsif @direction == "E"
-				@direction == "N"
+				@direction = "N"
 				puts "#{@direction} facing"
 			elsif @direction == "S"
-				@direction == "E"
+				@direction = "E"
 				puts "#{@direction} facing"
 			else @direction == "W"
-				@direction == "S"
+				@direction = "S"
 				puts "#{@direction} facing"
 			end
 	end
 
 	def turn_right
 			if @direction == "N"
-				@direction == "E"
+				@direction = "E"
 				puts "#{@direction} facing"
 			elsif @direction == "E"
-				@direction == "S"
+				@direction = "S"
 				puts "#{@direction} facing"
 			elsif @direction == "S"
-				@direction == "W"
+				@direction = "W"
 				puts "#{@direction} facing"
 			else @direction == "W"
-				@direction == "N"
+				@direction = "N"
 				puts "#{@direction} facing"
 			end
 	end
