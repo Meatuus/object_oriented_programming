@@ -22,53 +22,54 @@ class Rover
 			else
 				puts "error"
 			end
-			# puts "test"
 		end
 	end
 
 	def move
-		# puts "test move"
 		if @direction == "N"
 			@x_coordinate += 1
+			puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 		elsif @direction == "E"
 			@y_coordinate += 1
+			puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 		elsif @direction == "S"
 			@x_coordinate -= 1
+			puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 		else @direction == "W"
 			@y_coordinate -= 1
+			puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 		end
-		puts "#{@x_coordinate}, #{@y_coordinate}"
 	end
 
 	def turn_left
 			if @direction == "N"
 				@direction = "W"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			elsif @direction == "E"
 				@direction = "N"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			elsif @direction == "S"
 				@direction = "E"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			else @direction == "W"
 				@direction = "S"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			end
 	end
 
 	def turn_right
 			if @direction == "N"
 				@direction = "E"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			elsif @direction == "E"
 				@direction = "S"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			elsif @direction == "S"
 				@direction = "W"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			else @direction == "W"
 				@direction = "N"
-				puts "#{@direction} facing"
+				puts "#{@x_coordinate}, #{@y_coordinate}, #{@direction}"
 			end
 	end
 
